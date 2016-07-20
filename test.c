@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <sqlite3.h>
 #include <string.h>
-#include "libsqlite.h"
+#include "sqlitelib.h"
 
 
 int TestExecCommand(const char *query, unsigned int size)
@@ -138,7 +138,8 @@ void RunTests(void)
 	TestDeleteTable();
 }
 
-void main(void)
+int main(void)
 {
 	RunTests();
+    return 0;
 }
